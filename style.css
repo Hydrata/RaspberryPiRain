@@ -1,0 +1,136 @@
+body {
+  overflow: hidden;
+}
+
+.cloud {
+  width: 250px;
+  height: 100px;
+  border-radius: 100px;
+  position: relative;
+  margin: 120px auto 20px;
+  -webkit-animation: cloudfloat 3s ease-in-out infinite;
+  -moz-animation: cloudfloat 3s ease-in-out infinite;
+  animation: cloudfloat 3s ease-in-out infinite;
+}
+.cloud:after, .cloud:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+.cloud:after {
+  width: 80px;
+  height: 80px;
+  top: -50px;
+  left: 50px;
+  border-radius: 100px;
+}
+.cloud:before {
+  width: 110px;
+  height: 110px;
+  top: -50px;
+  right: 30px;
+  border-radius: 200px;
+}
+
+@-webkit-keyframes cloudfloat {
+  50% {
+    -webkit-transform: translateY(20px);
+  }
+}
+@-moz-keyframes cloudfloat {
+  50% {
+    -moz-transform: translateY(20px);
+  }
+}
+@keyframes cloudfloat {
+  50% {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+.cloud {
+  background-color: #3399ff;
+}
+.cloud:before, .cloud:after {
+  background-color: #3399ff;
+}
+
+.drop {
+  width: 6px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  box-sizing: content-box;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  transform: rotateZ(-45deg);
+  background-color: rgba(102, 179, 255, 0.8);
+  -webkit-animation: dropfall 2s ease-in-out infinite;
+  -moz-animation: dropfall 2s ease-in-out infinite;
+  animation: dropfall 2s ease-in-out infinite;
+}
+
+/* animate the drops*/
+@-webkit-keyframes dropfall {
+  100% {
+    -webkit-transform: translateY(300px);
+    background-color: rgba(102, 179, 255, 0);
+  }
+}
+@-moz-keyframes dropfall {
+  100% {
+    -moz-transform: translateY(300px);
+    background-color: rgba(102, 179, 255, 0);
+  }
+}
+@keyframes dropfall {
+  100% {
+    -webkit-transform: translateY(300px);
+    -moz-transform: translateY(300px);
+    -ms-transform: translateY(300px);
+    -o-transform: translateY(300px);
+    transform: translateY(300px);
+    background-color: rgba(102, 179, 255, 0);
+  }
+}
+
+.rain_gauge {
+  width: 120px;
+  height: 60px;
+  position: relative;
+  left: 618px;
+  top: 200px;
+  background-color: #ecffe6;
+  opacity: 0.5;
+}
+
+.tipping_bucket {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 24px solid #66ff33;
+  position: relative;
+  left: 20px;
+  top: 26px;
+  transform: rotate(-7deg);
+}
+.tipping_bucket_bottom {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid grey;
+  position: relative;
+  left: 55px;
+  top: 25px;
+  transform: rotate(-7deg);
+}
+
+.rain_amount {
+  position: relative;
+  left: 300px;
+}

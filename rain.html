@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="functions.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Capture rain</title>
+</head>
+
+<body>
+
+
+<div class="animation">
+	<div class="cloud">
+	  <div class="rain"></div>
+	</div>
+
+	<div class="rain_gauge">
+	  <div class="tipping_bucket"></div>
+	  <div class="tipping_bucket_bottom"></div>
+	</div>
+
+	<div class="rain_amount">
+	  <input type="range" min="10" max="100" value="50" step="10" id="rainfall_slider" oninput="changeRainfallAmount(value)">
+	  <output for="rainfall_slider" id="rainfall">50</output>mm
+	</div>
+</div>
+
+</body>
+</html>
